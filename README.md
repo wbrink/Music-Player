@@ -13,4 +13,4 @@ The only information that is needed in the file is the path. An example of the c
 > home/name-of-computer
 
 
-This project relied on the use of QDesigner to make the user interface file. This can be adjusted with *music_player2.ui*
+This project relied on the use of QDesigner to make the user interface file. This can be adjusted with *music_player.ui*
