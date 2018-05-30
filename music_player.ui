@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MP3 Player</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>781</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;All Songs&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <attribute name="title">
+     <string>Libary</string>
+    </attribute>
+    <widget class="QPushButton" name="playButton">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>100</y>
+       <width>89</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Play</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="prevButton">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>10</y>
+       <width>89</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Prev</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="songPlayingLabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>320</y>
+       <width>231</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;song&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="songSlider">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>290</y>
+       <width>541</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="endLabel">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>290</y>
+       <width>31</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>end</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="volumeLabel">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>230</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Volume</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="nextButton">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>170</y>
+       <width>89</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Next</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="songTableWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>631</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::SolidLine</enum>
+     </property>
+     <property name="rowCount">
+      <number>0</number>
+     </property>
+     <property name="columnCount">
+      <number>6</number>
+     </property>
+     <column>
+      <property name="text">
+       <string>Song</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Artist</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Album</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Length</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Path</string>
+      </property>
+     </column>
+     <column/>
+    </widget>
+    <widget class="QLabel" name="startLabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>290</y>
+       <width>41</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>start</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="volumeSlider">
+     <property name="geometry">
+      <rect>
+       <x>700</x>
+       <y>250</y>
+       <width>20</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Playlists</string>
+    </attribute>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>771</width>
+       <height>361</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="playlists">
+      <widget class="QLabel" name="search_label_2">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>10</y>
+         <width>67</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="searchEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>30</y>
+         <width>201</width>
+         <height>25</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="playlistTableWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>511</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="gridStyle">
+        <enum>Qt::SolidLine</enum>
+       </property>
+       <property name="rowCount">
+        <number>0</number>
+       </property>
+       <property name="columnCount">
+        <number>3</number>
+       </property>
+       <column>
+        <property name="text">
+         <string>Playlist</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Songs</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Date</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QRadioButton" name="deleteButton_2">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>170</y>
+         <width>141</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Delete Playlists</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="finaldeleteButton_2">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>240</y>
+         <width>89</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalDeleteLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>596</x>
+         <y>290</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="playlist_songs">
+      <widget class="QTableWidget" name="songTableWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>631</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="gridStyle">
+        <enum>Qt::SolidLine</enum>
+       </property>
+       <property name="rowCount">
+        <number>0</number>
+       </property>
+       <property name="columnCount">
+        <number>6</number>
+       </property>
+       <column>
+        <property name="text">
+         <string>Song</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Artist</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Album</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Length</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Path</string>
+        </property>
+       </column>
+       <column/>
+      </widget>
+      <widget class="QLabel" name="endLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>290</y>
+         <width>31</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>end</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="volumeLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>680</x>
+         <y>230</y>
+         <width>67</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Volume</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="songPlayingLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>320</y>
+         <width>231</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;song&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="playButton_2">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>100</y>
+         <width>89</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Play</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="prevButton_2">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>10</y>
+         <width>89</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Prev</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="volumeSlider_2">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>250</y>
+         <width>20</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QSlider" name="songSlider_2">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>290</y>
+         <width>541</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="nextButton_2">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>170</y>
+         <width>89</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Next</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="startLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>290</y>
+         <width>41</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>start</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="playlist_button_2">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>320</y>
+         <width>211</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Playlists</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="playlist_name_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>340</y>
+         <width>101</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Playlistname</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Create Playlist</string>
+    </attribute>
+    <widget class="QTableWidget" name="songTableWidget_tab3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>511</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::MultiSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::SolidLine</enum>
+     </property>
+     <property name="rowCount">
+      <number>0</number>
+     </property>
+     <property name="columnCount">
+      <number>6</number>
+     </property>
+     <column>
+      <property name="text">
+       <string>Song</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Artist</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Album</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Length</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Path</string>
+      </property>
+     </column>
+     <column/>
+    </widget>
+    <widget class="QLineEdit" name="searchEdit_tab3">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>30</y>
+       <width>201</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>10</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="playlistNameEdit_tab3">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>160</y>
+       <width>191</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>130</y>
+       <width>111</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Playlist Name</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveButton_tab3">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>200</y>
+       <width>89</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="playlist_verifier_tab3">
+     <property name="geometry">
+      <rect>
+       <x>546</x>
+       <y>239</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
